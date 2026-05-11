@@ -15,11 +15,13 @@ class Roles:
     mantenemos la tabla 'usuarios'.
 
     Roles disponibles:
+    - SUPERADMIN: Acceso total sin restricciones, ve todos los grupos
     - ADMIN: Acceso completo, gestiona usuarios y configuración
     - RESPONSABLE: Aprueba/rechaza facturas (el nombre real del rol de aprobador)
     - CONTADOR: Procesa pagos de facturas aprobadas, puede devolver facturas
     - VIEWER: Solo lectura, no puede aprobar/rechazar
     """
+    SUPERADMIN = "superadmin"  # Acceso total sin restricciones
     ADMIN = "admin"
     RESPONSABLE = "responsable"  # Aprobador de facturas
     CONTADOR = "contador"  # Procesamiento contable (NUEVO 2025-11-18)

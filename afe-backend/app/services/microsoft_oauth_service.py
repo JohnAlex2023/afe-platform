@@ -9,6 +9,8 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.models.usuario import Usuario
+from app.models.role import Role
+from app.utils.logger import logger
 
 
 class MicrosoftOAuthService:
@@ -29,6 +31,7 @@ class MicrosoftOAuthService:
         self.scopes = [s for s in all_scopes if s not in reserved_scopes]
 
         # URL de autorización de Microsoft
+        logger.debug("OAuth tenant configurado: %s", self.tenant_id)
         self.authority = f"https://login.microsoftonline.com/{self.tenant_id}"
 
         # Crear aplicación MSAL
@@ -75,9 +78,9 @@ class MicrosoftOAuthService:
         Raises:
             HTTPException: Si hay error al obtener el token
         """
-        print(f" Intentando intercambiar código por token...")
-        print(f"   Redirect URI configurado: {self.redirect_uri}")
-        print(f"   Scopes solicitados: {self.scopes}")
+        logger.debug("Intentando intercambiar código por token...")
+        logger.debug("Redirect URI configurado: %s", self.redirect_uri)
+        logger.debug("Scopes solicitados: %s", self.scopes)
 
         result = self.msal_app.acquire_token_by_authorization_code(
             code=code,
@@ -85,21 +88,21 @@ class MicrosoftOAuthService:
             redirect_uri=self.redirect_uri
         )
 
-        print(f"   Resultado de MSAL: {result.keys() if isinstance(result, dict) else 'No es dict'}")
+        logger.debug("Resultado de MSAL: %s", result.keys() if isinstance(result, dict) else 'No es dict')
 
         if "error" in result:
             error_msg = result.get('error_description', result.get('error', 'Unknown error'))
             correlation_id = result.get('correlation_id', 'No correlation ID')
-            print(f"    Error MSAL: {error_msg}")
-            print(f"   Correlation ID: {correlation_id}")
-            print(f"   Error completo: {result}")
+            logger.error("Error MSAL: %s", error_msg)
+            logger.error("Correlation ID: %s", correlation_id)
+            logger.debug("Error completo: %s", result)
 
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Microsoft OAuth Error: {error_msg}. Correlation ID: {correlation_id}"
             )
 
-        print(f"   Token obtenido exitosamente")
+        logger.info("Token OAuth obtenido exitosamente")
         return result
 
     def get_user_info(self, access_token: str) -> Dict[str, Any]:
@@ -178,7 +181,7 @@ class MicrosoftOAuthService:
         self,
         db: Session,
         user_info: Dict[str, Any],
-        default_role_id: int = 2
+        default_role_name: str = "viewer"
     ) -> Usuario:
         """
         Busca o crea un usuario en base a la información de Microsoft.
@@ -186,7 +189,7 @@ class MicrosoftOAuthService:
         Args:
             db: Sesión de base de datos
             user_info: Información del usuario de Microsoft
-            default_role_id: ID del rol por defecto (2 = usuario estándar)
+            default_role_name: Nombre del rol por defecto para nuevos usuarios OAuth
 
         Returns:
             Usuario encontrado o creado
@@ -222,6 +225,17 @@ class MicrosoftOAuthService:
             db.refresh(usuario)
             return usuario
 
+        # Buscar el rol por nombre (no por ID hardcodeado)
+        role = db.query(Role).filter(Role.nombre == default_role_name).first()
+        if not role:
+            logger.error("Rol '%s' no encontrado en la DB. Roles disponibles: %s",
+                         default_role_name,
+                         [r.nombre for r in db.query(Role).all()])
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Rol '{default_role_name}' no configurado en el sistema"
+            )
+
         # Crear nuevo usuario
         # Generar username único basado en email
         username = email.split("@")[0]
@@ -247,13 +261,15 @@ class MicrosoftOAuthService:
             email=email,
             area=user_info.get("office_location") or "General",
             activo=True,
-            role_id=default_role_id,
+            role_id=role.id,
             auth_provider="microsoft",
             oauth_id=oauth_id,
             oauth_picture=user_info.get("photo_url"),
             hashed_password=None,  # No necesita password para OAuth
             must_change_password=False  # No aplica para OAuth
         )
+
+        logger.info("Nuevo usuario OAuth creado: %s (rol: %s)", username, default_role_name)
 
         db.add(nuevo_usuario)
         db.commit()

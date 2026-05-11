@@ -7,13 +7,16 @@ from app.utils.logger import logger
 
 
 def create_default_roles_and_admin(db: Session):
-    # === Crear roles si no existen ===
-    roles = {"admin", "responsable"}
-    for role_name in roles:
-        if not db.query(Role).filter(Role.nombre == role_name).first():
-            db.add(Role(nombre=role_name))
-            logger.info("Rol creado: %s", role_name)
-    db.commit()
+    # === Verificar roles (deben ser creados por migraciones) ===
+    roles_esperados = {"superadmin", "admin", "responsable", "contador", "viewer"}
+    roles_existentes = {r.nombre for r in db.query(Role).all()}
+    
+    missing = roles_esperados - roles_existentes
+    if missing:
+        logger.warning("FALTAN ROLES CRÍTICOS EN DB (deberían estar en migraciones): %s", missing)
+    else:
+        logger.info("Verificación de roles: OK")
+
 
     # === Crear usuario SUPER ADMIN si no existe ===
     super_admin = db.query(Usuario).filter(Usuario.usuario == "super.admin").first()
