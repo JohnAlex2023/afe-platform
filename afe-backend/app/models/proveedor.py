@@ -93,7 +93,7 @@ class Proveedor(Base):
     # ==================== ESTADO ====================
     activo = Column(
         Boolean,
-        server_default=text("1"),
+        server_default=text("true"),
         nullable=False,
         default=True,
         comment="Flag de estado activo/inactivo"
@@ -116,7 +116,7 @@ class Proveedor(Base):
         Boolean,
         nullable=False,
         default=False,
-        server_default=text("0"),
+        server_default=text("false"),
         index=True,
         comment="[DEPRECATED 2025-12-15] Flag auto-creación (ya no se usa, siempre False)"
     )

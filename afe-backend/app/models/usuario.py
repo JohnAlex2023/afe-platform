@@ -12,11 +12,11 @@ class Usuario(Base):
     email = Column(String(255), nullable=False, unique=True)
     area = Column(String(100))
     telefono = Column(String(50))
-    activo = Column(Boolean, server_default=text("1"), nullable=False)
+    activo = Column(Boolean, server_default=text("true"), nullable=False)
     last_login = Column(DateTime(timezone=True), nullable=True)
     role_id = Column(BigInteger, ForeignKey("roles.id", onupdate="CASCADE", ondelete="RESTRICT"), nullable=False)
     hashed_password = Column(String(255), nullable=True)  # Nullable para usuarios OAuth
-    must_change_password = Column(Boolean, server_default=text("1"), nullable=False) # obliga a cambiar la contraseña en el primer login
+    must_change_password = Column(Boolean, server_default=text("true"), nullable=False) # obliga a cambiar la contraseña en el primer login
 
     # Campos para autenticación OAuth
     auth_provider = Column(String(50), server_default=text("'local'"), nullable=False)  # 'local', 'microsoft', 'google', etc.

@@ -143,3 +143,19 @@ _old/
 # Archivos de datos temporales
 temp_*.json
 *.tmp
+
+
+# Docker
+docker-compose.override.yml
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Node
+node_modules/
+
+# Build frontend
+dist/
+build/
