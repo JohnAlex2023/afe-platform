@@ -34,6 +34,14 @@ def create_app() -> FastAPI:
     # --- Rutas centralizadas ---
     app.include_router(api_router)
 
+    @app.get("/")
+    def root():
+        return {
+            "message": "AFE Backend funcionando ",
+            "docs": "/docs",
+            "api": "/api/v1"
+        }
+
     return app
 
 

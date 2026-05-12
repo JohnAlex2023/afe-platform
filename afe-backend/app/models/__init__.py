@@ -11,7 +11,8 @@ from .audit_log import AuditLog
 from .workflow_aprobacion import (
     WorkflowAprobacionFactura,
     AsignacionNitResponsable,
-    NotificacionWorkflow
+    NotificacionWorkflow,
+    AlertaAprobacionAutomatica
 )
 from .patrones_facturas import PatronesFacturas, TipoPatron
 from .email_config import CuentaCorreo, NitConfiguracion, HistorialExtraccion
@@ -31,6 +32,7 @@ __all__ = [
     "WorkflowAprobacionFactura",
     "AsignacionNitResponsable",
     "NotificacionWorkflow",
+    "AlertaAprobacionAutomatica",
     "PatronesFacturas",
     "TipoPatron",
     "CuentaCorreo",
