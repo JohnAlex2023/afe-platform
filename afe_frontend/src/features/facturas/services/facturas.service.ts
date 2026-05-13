@@ -4,6 +4,7 @@
  */
 
 import apiClient from '../../../services/api';
+import { API_BASE_URL } from '../../../config/api';
 
 // ============================================================================
 // INTERFACES Y TIPOS
@@ -126,9 +127,8 @@ export const facturasService = {
    * @deprecated Use openPdfInNewTab() instead. This method doesn't include authentication.
    */
   getPdfUrl(id: number, download: boolean = false): string {
-    const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
     const downloadParam = download ? '?download=true' : '';
-    return `${baseUrl}/api/v1/facturas/${id}/pdf${downloadParam}`;
+    return `${API_BASE_URL}/facturas/${id}/pdf${downloadParam}`;
   },
 
   /**
