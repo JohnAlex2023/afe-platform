@@ -1,6 +1,6 @@
 # Sistema AFE - Gestión de Facturas Electrónicas
 
-**https://afe-platform-iota.vercel.app/login
+**https://afe-platform-iota.vercel.app/
 
 Sistema empresarial integral para automatizar la gestión, aprobación y validación de facturas electrónicas en entornos multi-tenant.
 
