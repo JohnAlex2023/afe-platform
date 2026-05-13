@@ -1,5 +1,7 @@
 # Sistema AFE - Gestión de Facturas Electrónicas
 
+**https://afe-platform-iota.vercel.app/login
+
 Sistema empresarial integral para automatizar la gestión, aprobación y validación de facturas electrónicas en entornos multi-tenant.
 
 ## 🚀 Stack Tecnológico
@@ -256,11 +258,7 @@ BACKEND_API_URL=http://localhost:8000/api/v1
 - **[DOCUMENTACION_TECNICA.md](DOCUMENTACION_TECNICA.md)** - Documentación técnica completa de traspaso
 - **[Backend README](afe-backend/README.md)** - Guía detallada del backend
 - **[Frontend README](afe_frontend/README.md)** - Guía del frontend
-- **[Invoice Extractor README](invoice_extractor/README.md)** - Guía del extractor
-
-### Swagger API
-- **Desarrollo:** http://localhost:8000/docs
-- **Redoc:** http://localhost:8000/redoc
+- **[Invoice Extractor README](invoice_extractor/README.md)** - Guía del extracto
 
 ---
 
