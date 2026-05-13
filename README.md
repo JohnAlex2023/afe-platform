@@ -4,7 +4,7 @@
 
 ### Credenciales demo
 
-- Usuario: demo@afe.com
+- Usuario: usuario.demo
 - Contraseña: Demo2026!
 
 > Cuenta de demostración con acceso limitado para pruebas.
