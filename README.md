@@ -360,7 +360,3 @@ asignacion_nit_responsable (automatización)
 
 ---
 
-## 📄 Licencia
-
-Propietario: Zentria / AVIDANTI
-Uso interno exclusivo
