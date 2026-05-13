@@ -1,6 +1,13 @@
 # Sistema AFE - Gestión de Facturas Electrónicas
 
-**https://afe-platform-iota.vercel.app/
+🌐 https://afe-platform-iota.vercel.app/
+
+### Credenciales demo
+
+- Usuario: demo@afe.com
+- Contraseña: Demo2026!
+
+> Cuenta de demostración con acceso limitado para pruebas.
 
 Sistema empresarial integral para automatizar la gestión, aprobación y validación de facturas electrónicas en entornos multi-tenant.
 
