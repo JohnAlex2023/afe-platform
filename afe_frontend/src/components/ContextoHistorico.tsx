@@ -131,7 +131,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
 
         {/* Estadísticas */}
         <Grid container spacing={2} mb={3}>
-          <Grid size={{ xs: 6, md: 3 }}>
+          <Grid xs={6} md={3}>
             <Box textAlign="center" p={1} bgcolor="background.default" borderRadius={1}>
               <Typography variant="h5" fontWeight="bold" color="primary">
                 {contexto.estadisticas.pagos_analizados}
@@ -141,7 +141,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
               </Typography>
             </Box>
           </Grid>
-          <Grid size={{ xs: 6, md: 3 }}>
+          <Grid xs={6} md={3}>
             <Box textAlign="center" p={1} bgcolor="background.default" borderRadius={1}>
               <Typography variant="h5" fontWeight="bold" color="primary">
                 {contexto.estadisticas.meses_con_pagos}
@@ -151,7 +151,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
               </Typography>
             </Box>
           </Grid>
-          <Grid size={{ xs: 6, md: 3 }}>
+          <Grid xs={6} md={3}>
             <Box textAlign="center" p={1} bgcolor="background.default" borderRadius={1}>
               <Typography variant="h5" fontWeight="bold" color="primary">
                 ${contexto.estadisticas.monto_promedio.toLocaleString('es-CO')}
@@ -161,7 +161,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
               </Typography>
             </Box>
           </Grid>
-          <Grid size={{ xs: 6, md: 3 }}>
+          <Grid xs={6} md={3}>
             <Box textAlign="center" p={1} bgcolor="background.default" borderRadius={1}>
               <Typography variant="h5" fontWeight="bold" color="primary">
                 {contexto.estadisticas.coeficiente_variacion.toFixed(1)}%
@@ -180,7 +180,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
               {dentroRango ? '✅ Monto dentro del rango esperado' : '❌ Monto fuera del rango esperado'}
             </Typography>
             <Grid container spacing={2}>
-              <Grid size={{ xs: 4 }}>
+              <Grid xs={4}>
                 <Typography variant="caption" color="text.secondary">
                   Mínimo Esperado
                 </Typography>
@@ -188,7 +188,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
                   ${contexto.rango_esperado.inferior.toLocaleString('es-CO')}
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 4 }}>
+              <Grid xs={4}>
                 <Typography variant="caption" color="text.secondary">
                   Monto Actual
                 </Typography>
@@ -196,7 +196,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
                   ${montoActual.toLocaleString('es-CO')}
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 4 }}>
+              <Grid xs={4}>
                 <Typography variant="caption" color="text.secondary">
                   Máximo Esperado
                 </Typography>
@@ -215,7 +215,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
               📅 Último Pago Registrado
             </Typography>
             <Grid container spacing={2}>
-              <Grid size={{ xs: 6 }}>
+              <Grid xs={6}>
                 <Typography variant="caption" color="text.secondary">
                   Fecha
                 </Typography>
@@ -223,7 +223,7 @@ const ContextoHistoricoCard: React.FC<ContextoHistoricoProps> = ({ contexto, mon
                   {new Date(contexto.ultimo_pago.fecha).toLocaleDateString('es-CO')}
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 6 }}>
+              <Grid xs={6}>
                 <Typography variant="caption" color="text.secondary">
                   Monto
                 </Typography>

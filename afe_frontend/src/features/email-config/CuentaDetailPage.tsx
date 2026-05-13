@@ -183,7 +183,7 @@ const CuentaDetailPage: React.FC = () => {
         <Card sx={{ mb: 3, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
           <CardContent sx={{ p: 3 }}>
             <Grid container spacing={3} alignItems="center">
-              <Grid size={{ xs: 12, md: 8 }}>
+              <Grid xs={12} md={8}>
                 <Stack spacing={1}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     <EmailIcon sx={{ fontSize: 40, color: 'white' }} />
@@ -215,7 +215,7 @@ const CuentaDetailPage: React.FC = () => {
                 </Stack>
               </Grid>
 
-              <Grid size={{ xs: 12, md: 4 }}>
+              <Grid xs={12} md={4}>
                 <Stack spacing={1}>
                   <Button
                     variant="contained"
@@ -243,7 +243,7 @@ const CuentaDetailPage: React.FC = () => {
 
         {/* Estadísticas Rápidas */}
         <Grid container spacing={2}>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h3" color="primary" sx={{ fontWeight: 700 }}>
@@ -255,7 +255,7 @@ const CuentaDetailPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h3" color="success.main" sx={{ fontWeight: 700 }}>
@@ -267,7 +267,7 @@ const CuentaDetailPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h3" color="info.main" sx={{ fontWeight: 700 }}>
@@ -279,7 +279,7 @@ const CuentaDetailPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h3" color="warning.main" sx={{ fontWeight: 700 }}>
@@ -314,7 +314,7 @@ const CuentaDetailPage: React.FC = () => {
             {/* Barra de herramientas */}
             <Box sx={{ mb: 3 }}>
               <Grid container spacing={2} alignItems="center">
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid xs={12} md={6}>
                   <TextField
                     fullWidth
                     placeholder="Buscar por NIT o nombre de proveedor..."
@@ -329,7 +329,7 @@ const CuentaDetailPage: React.FC = () => {
                     }}
                   />
                 </Grid>
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid xs={12} md={6}>
                   <Stack direction="row" spacing={1} justifyContent="flex-end">
                     <FormControlLabel
                       control={
@@ -459,7 +459,7 @@ const CuentaDetailPage: React.FC = () => {
           </Box>
         ) : estadisticas ? (
           <Grid container spacing={3}>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
@@ -499,7 +499,7 @@ const CuentaDetailPage: React.FC = () => {
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>

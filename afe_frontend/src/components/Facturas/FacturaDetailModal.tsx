@@ -291,7 +291,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
             Fechas Importantes
           </Typography>
           <Grid container spacing={2}>
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid xs={12} sm={6} md={3}>
               <Card elevation={0} sx={{ borderLeft: `4px solid ${zentriaColors.violeta.main}` }}>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems="center" mb={1}>
@@ -307,7 +307,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid xs={12} sm={6} md={3}>
               <Card elevation={0} sx={{ borderLeft: `4px solid ${getVencimientoColor() === 'error' ? '#f44336' : getVencimientoColor() === 'warning' ? '#ff9800' : '#4caf50'}` }}>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems="center" mb={1}>
@@ -329,7 +329,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid xs={12} sm={6} md={3}>
               <Card elevation={0} sx={{ borderLeft: `4px solid ${zentriaColors.verde.main}` }}>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems="center" mb={1}>
@@ -345,7 +345,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid xs={12} sm={6} md={3}>
               <Card elevation={0} sx={{ borderLeft: `4px solid ${zentriaColors.naranja.main}` }}>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems="center" mb={1}>
@@ -381,7 +381,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
           </Typography>
           <Paper elevation={0} sx={{ p: 2, backgroundColor: '#f8f9fa', borderRadius: 2 }}>
             <Grid container spacing={3}>
-              <Grid size={{ xs: 12, md: 8 }}>
+              <Grid xs={12} md={8}>
                 <Typography variant="caption" color="text.secondary" fontWeight={600}>
                   RAZÓN SOCIAL
                 </Typography>
@@ -389,7 +389,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
                   {factura.proveedor?.razon_social || '-'}
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 12, md: 4 }}>
+              <Grid xs={12} md={4}>
                 <Typography variant="caption" color="text.secondary" fontWeight={600}>
                   NIT
                 </Typography>
@@ -438,7 +438,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
               </Typography>
               <Grid container spacing={3}>
                 {/* Factura Actual */}
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid xs={12} md={6}>
                   <Paper
                     elevation={3}
                     sx={{
@@ -537,7 +537,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
                 </Grid>
 
                 {/* Factura Referencia */}
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid xs={12} md={6}>
                   <Paper
                     elevation={3}
                     sx={{
@@ -665,7 +665,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
               </Typography>
               <Paper elevation={3} sx={{ p: 3, borderRadius: 2 }}>
                 <Grid container spacing={3}>
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Box>
                       <Typography variant="caption" color="text.secondary" fontWeight={600}>
                         Subtotal
@@ -675,7 +675,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Box>
                       <Typography variant="caption" color="text.secondary" fontWeight={600}>
                         IVA
@@ -685,7 +685,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Box>
                       <Typography variant="caption" color="text.secondary" fontWeight={600}>
                         Total
@@ -695,7 +695,7 @@ function FacturaDetailModal({ open, onClose, workflow, contextoHistorico }: Fact
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Box
                       sx={{
                         p: 2,

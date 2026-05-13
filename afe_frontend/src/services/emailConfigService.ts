@@ -13,6 +13,7 @@ export interface CuentaCorreoSummary {
   nombre_descriptivo: string | null;
   activa: boolean;
   organizacion: string | null;
+  grupo_codigo?: string | null;
   total_nits: number;
   total_nits_activos: number;
   creada_en: string;

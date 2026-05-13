@@ -317,7 +317,7 @@ function FacturasPendientesPage() {
       {/* ESTADÍSTICAS */}
       {stats && (
         <Grid container spacing={2} sx={{ mb: 3 }}>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card sx={{ p: 2, textAlign: 'center', boxShadow: 1 }}>
               <Typography variant="h6" fontWeight={700} color="primary">
                 {stats.total_pendiente}
@@ -327,7 +327,7 @@ function FacturasPendientesPage() {
               </Typography>
             </Card>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card sx={{ p: 2, textAlign: 'center', boxShadow: 1 }}>
               <Typography variant="h6" fontWeight={700} color="#1a1a1a">
                 {formatCurrency(stats.monto_pendiente)}
@@ -337,7 +337,7 @@ function FacturasPendientesPage() {
               </Typography>
             </Card>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card sx={{ p: 2, textAlign: 'center', boxShadow: 1 }}>
               <Typography variant="h6" fontWeight={700} color="success.main">
                 {stats.validadas_hoy}
@@ -537,7 +537,7 @@ function FacturasPendientesPage() {
                 }}
               >
                 <Grid container spacing={2}>
-                  <Grid size={{ xs: 12 }}>
+                  <Grid xs={12}>
                     <Typography variant="caption" color="text.secondary" fontWeight={600}>
                       NÚMERO DE FACTURA
                     </Typography>
@@ -546,7 +546,7 @@ function FacturasPendientesPage() {
                     </Typography>
                   </Grid>
 
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Typography variant="caption" color="text.secondary" fontWeight={600}>
                       PROVEEDOR
                     </Typography>
@@ -558,7 +558,7 @@ function FacturasPendientesPage() {
                     </Typography>
                   </Grid>
 
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Typography variant="caption" color="text.secondary" fontWeight={600}>
                       TOTAL A PAGAR
                     </Typography>
@@ -722,7 +722,7 @@ function FacturasPendientesPage() {
                 }}
               >
                 <Grid container spacing={2}>
-                  <Grid size={{ xs: 12 }}>
+                  <Grid xs={12}>
                     <Typography variant="caption" color="text.secondary" fontWeight={600}>
                       NÚMERO DE FACTURA
                     </Typography>
@@ -731,7 +731,7 @@ function FacturasPendientesPage() {
                     </Typography>
                   </Grid>
 
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Typography variant="caption" color="text.secondary" fontWeight={600}>
                       PROVEEDOR
                     </Typography>
@@ -743,7 +743,7 @@ function FacturasPendientesPage() {
                     </Typography>
                   </Grid>
 
-                  <Grid size={{ xs: 12, sm: 6 }}>
+                  <Grid xs={12} sm={6}>
                     <Typography variant="caption" color="text.secondary" fontWeight={600}>
                       TOTAL A PAGAR
                     </Typography>

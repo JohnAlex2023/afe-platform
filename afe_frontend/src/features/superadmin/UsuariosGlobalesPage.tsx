@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUser } from '../auth/authSlice';
-import type { RootState } from '../../store/store';
+import type { RootState } from '../../app/store';
 import {
   Box,
   Paper,
@@ -112,7 +112,7 @@ export default function UsuariosGlobalesPage() {
   const currentUser = useSelector((state: RootState) => state.auth.user);
 
   // Check if current user can delete (SuperAdmin or Admin)
-  const canDelete = ['superadmin', 'admin'].includes(currentUser?.role?.nombre?.toLowerCase() || '');
+  const canDelete = ['superadmin', 'admin'].includes(currentUser?.rol?.toLowerCase() || '');
 
   // ========================================================================
   // STATE

@@ -199,13 +199,13 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
 
           <Grid container spacing={3}>
             {/* Información Básica */}
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
                 Información Básica
               </Typography>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="email"
                 control={control}
@@ -222,7 +222,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="nombre_descriptivo"
                 control={control}
@@ -239,7 +239,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="organizacion"
                 control={control}
@@ -256,7 +256,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Autocomplete
                 options={grupos}
                 getOptionLabel={(option) => `${option.codigo_corto} - ${option.nombre}`}
@@ -306,14 +306,14 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
             </Grid>
 
             {/* Configuración de Extracción */}
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Divider sx={{ my: 2 }} />
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
                 Configuración de Extracción
               </Typography>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="fetch_limit"
                 control={control}
@@ -331,7 +331,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="fetch_days"
                 control={control}
@@ -350,7 +350,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
             </Grid>
 
             {/* NITs Iniciales */}
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Divider sx={{ my: 2 }} />
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
                 NITs Iniciales (Opcional)
@@ -360,7 +360,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
               </Typography>
             </Grid>
 
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Stack direction="row" spacing={1}>
                 <TextField
                   fullWidth
@@ -388,7 +388,7 @@ const CreateCuentaDialog: React.FC<Props> = ({ open, onClose, onSuccess }) => {
             </Grid>
 
             {nits.length > 0 && (
-              <Grid size={{ xs: 12 }}>
+              <Grid xs={12}>
                 <Box
                   sx={{
                     p: 2,

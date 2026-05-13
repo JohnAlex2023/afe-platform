@@ -49,7 +49,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       <CardContent sx={{ p: 3 }}>
         <Grid container spacing={3}>
           {/* Search Field */}
-          <Grid size={{ xs: 12, md: 7 }}>
+          <Grid xs={12} md={7}>
             <TextField
               fullWidth
               placeholder="Buscar factura..."
@@ -94,7 +94,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           </Grid>
 
           {/* Estado Filter */}
-          <Grid size={{ xs: 12, md: 5 }}>
+          <Grid xs={12} md={5}>
             <FormControl fullWidth>
               <Select
                 value={filterEstado}
@@ -142,11 +142,11 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           {/* Admin Vista Buttons */}
           {isAdmin && onVistaFacturasChange && vistaFacturas && (
             <>
-              <Grid size={{ xs: 12 }}>
+              <Grid xs={12}>
                 <Divider sx={{ my: 1 }} />
               </Grid>
 
-              <Grid size={{ xs: 12, md: 5 }}>
+              <Grid xs={12} md={5}>
                 <Button
                   fullWidth
                   variant={vistaFacturas === 'todas' ? 'contained' : 'outlined'}
@@ -175,7 +175,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 </Button>
               </Grid>
 
-              <Grid size={{ xs: 12, md: 4 }}>
+              <Grid xs={12} md={4}>
                 <Button
                   fullWidth
                   variant={vistaFacturas === 'asignadas' ? 'contained' : 'outlined'}
@@ -204,7 +204,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 </Button>
               </Grid>
 
-              <Grid size={{ xs: 12, md: 3 }}>
+              <Grid xs={12} md={3}>
                 <Button
                   fullWidth
                   variant="outlined"
@@ -234,7 +234,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
           {/* Responsable Export Button */}
           {!isAdmin && (
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Button
                 fullWidth
                 variant="outlined"

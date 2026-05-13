@@ -70,7 +70,7 @@ export const TendenciaAprobacionChart: React.FC<TendenciaAprobacionChartProps> =
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       const value = payload[0].value;
-      let color = zentriaColors.verde.main;
+      let color: string = zentriaColors.verde.main;
 
       // Color según el valor
       if (value < 50) {
@@ -108,7 +108,7 @@ export const TendenciaAprobacionChart: React.FC<TendenciaAprobacionChartProps> =
     const { cx, cy, payload } = props;
     const value = payload.tasa_aprobacion;
 
-    let color = zentriaColors.verde.main;
+    let color: string = zentriaColors.verde.main;
     if (value < 50) {
       color = '#ef4444';
     } else if (value < 75) {

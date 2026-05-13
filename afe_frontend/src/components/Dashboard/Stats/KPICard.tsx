@@ -93,8 +93,7 @@ export const KPICard: React.FC<KPICardProps> = ({
             color: mainColor,
           }}
         >
-          {React.cloneElement(icon as React.ReactElement, {
-            sx: { fontSize: 32 },
+          {React.cloneElement(icon as any, { sx: { fontSize: 32 },
           })}
         </Box>
 

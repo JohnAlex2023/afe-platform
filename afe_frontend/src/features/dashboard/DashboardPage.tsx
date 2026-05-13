@@ -613,7 +613,7 @@ function DashboardPage() {
         onRowsPerPageChange={handleRowsPerPageChange}
         onOpenDialog={openDialogWith}
         onMenuClick={handleMenuClick}
-        isAdmin={(user?.rol === 'admin' || user?.rol === 'responsable') && user?.rol !== 'superadmin'}
+        isAdmin={user?.rol === 'admin' || user?.rol === 'responsable'}
         isHistorico={isHistorico}
       />
 

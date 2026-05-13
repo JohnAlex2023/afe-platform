@@ -433,7 +433,7 @@ function FacturasPage() {
       {/* Barra de búsqueda y filtros */}
       <Paper elevation={2} sx={{ p: 2, mb: 2, borderRadius: 2 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid xs={12} md={6}>
             <TextField
               fullWidth
               placeholder="Buscar por factura, proveedor o NIT..."
@@ -460,7 +460,7 @@ function FacturasPage() {
               }}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid xs={12} md={6}>
             <Box display="flex" gap={1} justifyContent="flex-end">
               <Button
                 variant={showFilters ? 'contained' : 'outlined'}
@@ -493,7 +493,7 @@ function FacturasPage() {
         <Collapse in={showFilters}>
           <Divider sx={{ my: 2 }} />
           <Grid container spacing={2}>
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid xs={12} sm={6}>
               <FormControl fullWidth>
                 <InputLabel>Estado</InputLabel>
                 <Select
@@ -511,7 +511,7 @@ function FacturasPage() {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid xs={12} sm={6}>
               <FormControl fullWidth>
                 <InputLabel>Nivel de Similitud</InputLabel>
                 <Select

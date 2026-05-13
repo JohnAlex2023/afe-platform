@@ -105,7 +105,7 @@ export const StatsCards: React.FC<StatsCardsProps> = ({ stats, previousStats, on
   return (
     <Grid container spacing={3} sx={{ mb: 4 }}>
       {statsConfig.map((stat, index) => (
-        <Grid size={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }} key={index}>
+        <Grid xs={12} sm={6} md={2.4} lg={2.4} key={index}>
           <EnhancedStatCard
             label={stat.label}
             value={stat.value}

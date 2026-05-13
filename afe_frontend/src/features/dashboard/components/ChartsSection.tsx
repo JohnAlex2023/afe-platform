@@ -44,13 +44,13 @@ export const ChartsSection: React.FC<ChartsSectionProps> = ({ stats: dashboardSt
       <Grid container spacing={3}>
         {/* 3-chart layout: Bar (stacked) | Line | Gauge */}
         {/* Responsive: Full width on mobile/tablet, 33% on desktop */}
-        <Grid size={{ xs: 12, lg: 4 }}>
+        <Grid xs={12} lg={4}>
           <BarChartFacturas data={monthlyStats} loading={loading} />
         </Grid>
-        <Grid size={{ xs: 12, lg: 4 }}>
+        <Grid xs={12} lg={4}>
           <LineChartMontos data={monthlyStats} loading={loading} />
         </Grid>
-        <Grid size={{ xs: 12, lg: 4 }}>
+        <Grid xs={12} lg={4}>
           <GaugeChartKPI data={gaugeChartData} loading={loading} />
         </Grid>
       </Grid>

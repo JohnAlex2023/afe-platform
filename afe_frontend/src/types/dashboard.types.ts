@@ -87,7 +87,7 @@ export interface ChartProps {
 /**
  * Props para componente de distribución de estados
  */
-export interface DistribucionEstadosChartProps extends ChartProps {
+export interface DistribucionEstadosChartProps extends Omit<ChartProps, 'data'> {
   data: EstadisticasGraficasResponse['distribucion_estados'];
 }
 

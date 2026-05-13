@@ -175,7 +175,7 @@ const EmailConfigPage: React.FC = () => {
 
         {/* Estadísticas Globales */}
         <Grid container spacing={3} sx={{ mb: 4 }}>
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card
               elevation={0}
               sx={{
@@ -229,7 +229,7 @@ const EmailConfigPage: React.FC = () => {
             </Card>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card
               elevation={0}
               sx={{
@@ -283,7 +283,7 @@ const EmailConfigPage: React.FC = () => {
             </Card>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card
               elevation={0}
               sx={{
@@ -337,7 +337,7 @@ const EmailConfigPage: React.FC = () => {
             </Card>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid xs={12} sm={6} md={3}>
             <Card
               elevation={0}
               sx={{
@@ -408,7 +408,7 @@ const EmailConfigPage: React.FC = () => {
         >
           <CardContent sx={{ p: 3 }}>
             <Grid container spacing={3} alignItems="center">
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid xs={12} md={6}>
                 <TextField
                   fullWidth
                   placeholder="Buscar por email, nombre o número..."
@@ -454,7 +454,7 @@ const EmailConfigPage: React.FC = () => {
                   }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid xs={12} md={6}>
                 <Stack direction="row" spacing={2} alignItems="center" justifyContent="flex-end">
                   <FormControlLabel
                     control={
@@ -519,7 +519,7 @@ const EmailConfigPage: React.FC = () => {
                 <Grid container spacing={3} alignItems="center">
 
                   {/* Email + Estado */}
-                  <Grid size={{ xs: 12, md: 4 }}>
+                  <Grid xs={12} md={4}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                       <Box
                         sx={{
@@ -602,7 +602,7 @@ const EmailConfigPage: React.FC = () => {
                   </Grid>
 
                   {/* NITs Totales */}
-                  <Grid size={{ xs: 4, md: 1.5 }}>
+                  <Grid xs={4} md={1.5}>
                     <Box sx={{ textAlign: 'center' }}>
                       <Typography
                         variant="h5"
@@ -634,7 +634,7 @@ const EmailConfigPage: React.FC = () => {
                   </Grid>
 
                   {/* NITs Activos */}
-                  <Grid size={{ xs: 4, md: 1.5 }}>
+                  <Grid xs={4} md={1.5}>
                     <Box sx={{ textAlign: 'center' }}>
                       <Typography
                         variant="h5"
@@ -666,7 +666,7 @@ const EmailConfigPage: React.FC = () => {
                   </Grid>
 
                   {/* Fecha */}
-                  <Grid size={{ xs: 4, md: 2 }}>
+                  <Grid xs={4} md={2}>
                     <Box sx={{ textAlign: 'center' }}>
                       <Typography variant="caption" color="text.secondary" display="block" sx={{ fontSize: '0.75rem', mb: 0.5, fontWeight: 500 }}>
                         Creada hace
@@ -678,7 +678,7 @@ const EmailConfigPage: React.FC = () => {
                   </Grid>
 
                   {/* Acciones */}
-                  <Grid size={{ xs: 12, md: 3 }}>
+                  <Grid xs={12} md={3}>
                     <Stack direction="row" spacing={1.5} justifyContent="flex-end">
                       <Button
                         variant="contained"

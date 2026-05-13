@@ -83,7 +83,6 @@ function AsignacionesTab() {
   const [formData, setFormData] = useState<AsignacionFormData>({
     responsable_id: null,
     proveedor_id: null,
-    grupo_id: null,  // ← NUEVO
   });
   const [bulkResponsableId, setBulkResponsableId] = useState<number | null>(null);
   const [bulkProveedores, setBulkProveedores] = useState<string[]>([]);
@@ -283,7 +282,7 @@ function AsignacionesTab() {
           nit: proveedor.nit,
           nombre_proveedor: proveedor.razon_social || '',
           responsable_id: formData.responsable_id,
-          // grupo_id removido - arquitectura transitiva
+          grupo_id: grupoSeleccionado as number,
           area: proveedor.area,
           permitir_aprobacion_automatica: true,
           requiere_revision_siempre: false,

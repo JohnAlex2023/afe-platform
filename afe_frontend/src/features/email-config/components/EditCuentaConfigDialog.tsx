@@ -174,13 +174,13 @@ const EditCuentaConfigDialog: React.FC<Props> = ({ open, onClose, onSuccess, cue
 
           <Grid container spacing={3}>
             {/* Información Básica */}
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
                 Información Básica
               </Typography>
             </Grid>
 
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Controller
                 name="email"
                 control={control}
@@ -204,7 +204,7 @@ const EditCuentaConfigDialog: React.FC<Props> = ({ open, onClose, onSuccess, cue
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="nombre_descriptivo"
                 control={control}
@@ -222,7 +222,7 @@ const EditCuentaConfigDialog: React.FC<Props> = ({ open, onClose, onSuccess, cue
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="organizacion"
                 control={control}
@@ -241,14 +241,14 @@ const EditCuentaConfigDialog: React.FC<Props> = ({ open, onClose, onSuccess, cue
             </Grid>
 
             {/* Configuración de Extracción */}
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Divider sx={{ my: 2 }} />
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
                 Configuración de Extracción
               </Typography>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="max_correos_por_ejecucion"
                 control={control}
@@ -267,7 +267,7 @@ const EditCuentaConfigDialog: React.FC<Props> = ({ open, onClose, onSuccess, cue
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid xs={12} md={6}>
               <Controller
                 name="ventana_inicial_dias"
                 control={control}
@@ -287,14 +287,14 @@ const EditCuentaConfigDialog: React.FC<Props> = ({ open, onClose, onSuccess, cue
             </Grid>
 
             {/* Estado de la Cuenta */}
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Divider sx={{ my: 2 }} />
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
                 Estado
               </Typography>
             </Grid>
 
-            <Grid size={{ xs: 12 }}>
+            <Grid xs={12}>
               <Controller
                 name="activa"
                 control={control}
